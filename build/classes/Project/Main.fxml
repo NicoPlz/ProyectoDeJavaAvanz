@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Project.MainPageController">
+   <children>
+      <VBox layoutX="30.0" layoutY="31.0" prefHeight="225.0" prefWidth="194.0" />
+      <VBox layoutX="30.0" layoutY="284.0" prefHeight="225.0" prefWidth="194.0" />
+      <VBox layoutX="330.0" layoutY="59.0" prefHeight="111.0" prefWidth="77.0" />
+      <VBox layoutX="330.0" layoutY="306.0" prefHeight="111.0" prefWidth="77.0" />
+      <Button fx:id="AddPizza" layoutX="347.0" layoutY="127.0" mnemonicParsing="false" onAction="#newPizzaButtonPushed" text="AÑADIR" />
+      <Button fx:id="AddDrink" layoutX="347.0" layoutY="375.0" mnemonicParsing="false" onAction="#newDrinkButtonPushed" text="AÑADIR" />
+      <TableView fx:id="tableView1" layoutX="583.0" layoutY="50.0" prefHeight="219.0" prefWidth="326.0">
+        <columns>
+          <TableColumn fx:id="OrderItemColumn1" prefWidth="242.0" text="PEDIDO DEL ARTÍCULO (Pizza)" />
+          <TableColumn fx:id="QuantityColumn1" prefWidth="83.0" text="Cantidad" />
+        </columns>
+      </TableView>
+      <Button fx:id="ProceedBtn" layoutX="823.0" layoutY="479.0" mnemonicParsing="false" onAction="#proceedBtn" prefHeight="25.0" prefWidth="86.0" text="PAGO&gt;" />
+      <Separator layoutX="487.0" layoutY="-9.0" orientation="VERTICAL" prefHeight="611.0" prefWidth="6.0" />
+      <Button fx:id="DeleteBtn" layoutX="714.0" layoutY="479.0" mnemonicParsing="false" onAction="#deleteButtonPushed" prefHeight="25.0" prefWidth="86.0" text="BORRAR" />
+      <RadioButton fx:id="PC" layoutX="41.0" layoutY="61.0" mnemonicParsing="false" selected="true" text="Pizza de Pollo con Catupiry">
+         <toggleGroup>
+            <ToggleGroup fx:id="Pizza" />
+         </toggleGroup></RadioButton>
+      <RadioButton fx:id="PP" layoutX="41.0" layoutY="82.0" mnemonicParsing="false" text="Pizza de Pepperoni" toggleGroup="$Pizza" />
+      <RadioButton fx:id="CQ" layoutX="41.0" layoutY="106.0" mnemonicParsing="false" text="Pizza de cuatro quesos" toggleGroup="$Pizza" />
+      <RadioButton fx:id="SU" layoutX="41.0" layoutY="131.0" mnemonicParsing="false" text="Pizza Suprema" toggleGroup="$Pizza" />
+      <RadioButton fx:id="CE" layoutX="41.0" layoutY="156.0" mnemonicParsing="false" text="Pizza cuatro estaciones" toggleGroup="$Pizza" />
+      <RadioButton fx:id="coca" layoutX="49.0" layoutY="308.0" mnemonicParsing="false" selected="true" text="CocaCola">
+         <toggleGroup>
+            <ToggleGroup fx:id="Drink" />
+         </toggleGroup></RadioButton>
+      <RadioButton fx:id="fanta" layoutX="49.0" layoutY="329.0" mnemonicParsing="false" text="Fanta" toggleGroup="$Drink" />
+      <RadioButton fx:id="pilsen" layoutX="49.0" layoutY="353.0" mnemonicParsing="false" text="Pilsen" toggleGroup="$Drink" />
+      <RadioButton fx:id="heineken" layoutX="49.0" layoutY="379.0" mnemonicParsing="false" text="Heineken" toggleGroup="$Drink" />
+      <TextField fx:id="quantityPizza" layoutX="347.0" layoutY="100.0" prefHeight="40.0" prefWidth="50.0" text="1" />
+      <TextField fx:id="quantityDrink" layoutX="347.0" layoutY="341.0" prefHeight="25.0" prefWidth="41.0" text="1" />
+      <Label fx:id="quantityLabel1" layoutX="345.0" layoutY="74.0" text="Cantidad" />
+      <Label fx:id="quantityLabel2" layoutX="345.0" layoutY="317.0" text="Cantidad" />
+      <RadioButton fx:id="caipi" layoutX="49.0" layoutY="400.0" mnemonicParsing="false" text="Caipirinha" toggleGroup="$Drink" />
+      <TableView fx:id="tableView2" layoutX="583.0" layoutY="283.0" prefHeight="184.0" prefWidth="326.0">
+         <columns>
+            <TableColumn fx:id="OrderItemColumn2" prefWidth="242.0" text="PEDIDO DEL ARTÍCULO (BEBIDA)" />
+            <TableColumn fx:id="QuantityColumn2" prefWidth="83.0" text="QUANTITY" />
+         </columns>
+      </TableView>
+      <Label fx:id="quantityLabel11" layoutX="166.0" layoutY="22.0" prefHeight="27.0" prefWidth="273.0" text="Las mejores Pizzas!!" textFill="#d70909">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
